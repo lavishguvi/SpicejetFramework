@@ -44,5 +44,15 @@ public class LoginTest extends BaseClass {
 		login.LoginButton();		
 	}
 		
+	
+	@Test(priority = 3)
+	public void LoginwithInvaliduseremail() {
+		LoginPage login=new LoginPage(driver);
+		login.Login();
+		login.EmailButton();
+		login.EmailId(prop.getProperty("Email"));
+		login.Password(prop.getProperty("InvalidPas"));
+		login.LoginButton();		
+	}
 
 }
