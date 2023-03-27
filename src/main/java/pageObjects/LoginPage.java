@@ -4,10 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 public class LoginPage {
 	
-public WebDriver driver;
+public WebDriver driver ;
 
 	public LoginPage(WebDriver driver) {
 		this.driver=driver;
@@ -39,6 +38,7 @@ public WebDriver driver;
 	//Lets create as many methods that you can create here
 	public void Login() {
 		loginkey.click();
+		
 	}
 	
 	public void EmailButton() {
@@ -61,5 +61,4 @@ public WebDriver driver;
 	public void LoginButton() {
 		loginbutton.click();
 	}
-
 }

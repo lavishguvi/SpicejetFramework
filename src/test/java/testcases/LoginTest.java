@@ -1,6 +1,13 @@
 package testcases;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+
+ 
 
 import base.BaseClass;
 import pageObjects.LoginPage;
@@ -12,11 +19,18 @@ public class LoginTest extends BaseClass {
 	@Test(priority = 1)
 	public void LoginwithValidCredentials() {
 		LoginPage login=new LoginPage(driver);
+		Logger logger = (Logger) LogManager.getLogger("Hello");
+		logger.info("Hello");
+	    
 		login.Login();
+		logger.info("Login Button DOne");
 		login.EmailButton();
 		login.EmailId(prop.getProperty("Email"));
+		logger.info("Login Button DOne");
 		login.Password(prop.getProperty("Password"));
-		login.LoginButton();		
+		
+		login.LoginButton();
+		
 	}
 	
 
@@ -26,7 +40,7 @@ public class LoginTest extends BaseClass {
 		login.Login();
 		login.EmailButton();
 		login.EmailId(prop.getProperty("Email"));
-		login.Password(prop.getProperty("InvalidPass"));
+		login.Password(prop.getProperty("InvalidPas"));
 		login.LoginButton();		
 	}
 		

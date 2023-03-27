@@ -1,6 +1,7 @@
 package testcases;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 import base.BaseClass;
 import pageObjects.SignupPage;
@@ -21,7 +22,7 @@ public void Signup() {
 	signup.MobileNumber(prop.getProperty("MobileNumber"));
 	signup.Emailid(prop.getProperty("Email"));
 	signup.EnterPassword(prop.getProperty("Password"));
-	signup.ConfirmPassword(prop.getProperty("Confirmpassword"));
+	signup.ConfirmPassword(prop.getProperty("Confirmpasswo"));
 	
 	
 }

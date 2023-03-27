@@ -45,6 +45,7 @@ public class Listeners extends BaseClass implements ITestListener {
 			e1.printStackTrace();
 		}
 
+		//will capture ur screenshot of failure testcase
 		try {
 			String screenshotPath = takeScreenshot(testName, driver);
 			extentTest.addScreenCaptureFromPath(screenshotPath, testName);
